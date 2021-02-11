@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:c="http://www.springframework.org/schema/c"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/beans/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+        
+        <util:list list-class="java.util.LinkedList" id="friend">
+             <value>"Manish Gupta </value>
+             <value>"Monish Gupta </value>
+             <value>"Manisha Gupta </value>
+             <value>"Monisha Gupta </value>
+             
+        </util:list>
+        <util:map map-class="java.util.HashMap" id ="hp">
+                <entry key="Manish Gupta" value="35000"/>
+                <entry key="Niraj Sing" value="35001"/>
+        </util:map>
+        <util:properties id="pr">
+            <prop key="1"> 1000</prop>
+            <prop key="2"> manish</prop>
+            <prop key="3"> gupta</prop>
+        </util:properties>
+        <bean class="com.springcore.standalone.collections.Person" name="p1">
+                <property name="friends">
+                        <ref bean="friend"/>
+                </property>
+                <property name="salary">
+                        <ref bean="hp"/>
+                </property>
+                <property name="prop" ref="pr" />
+                
+        </bean>
+      
+</beans>

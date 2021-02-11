@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!-- beans here : infact different different way of creation -->
+
+        <bean name="emp1" class="com.springcore.collections.Emp">
+            <property name="name" value="Radhe"/>
+            <property name="phones">
+                <list>
+                  <value>30984309</value>
+                  <value>03985203</value>
+                  <value>03984333</value>
+                  <value>03298452</value>
+                  <null/>
+
+                </list>
+            </property>
+            <property name="address">
+                <set>
+                    <value>Delhi</value>
+                    <value>Mumbai</value>
+                    <value>Lucknow</value>
+                    <value>Agra</value>
+                </set>
+            </property>
+            <property name="courses">
+                <map>
+                    <entry key="java" value="1months"/>
+                    <entry key="java1" value="2months"/>
+                    <entry key="java2" value="3months"/>
+                    <entry key="java3" value="4months"/>
+                </map>
+            </property>
+        </bean>
+    
+</beans>
